@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { View, Button, FlatList, StatusBar } from 'react-native';
+import { View, FlatList } from 'react-native';
 import PlayerCard from '../PlayerCard';
 import mainStyles from '../../Styles/mainStyles';
 
