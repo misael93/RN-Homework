@@ -32,7 +32,7 @@ export default class Login extends Component {
 
         var e = this.state.email.toLowerCase();
         var p = this.state.password;
-        if (e == 'h' && p == '1') {
+        if (e == 'homework@gmail.com' && p == '123456') {
             this.setState({
                 email: '',
                 password: '',
