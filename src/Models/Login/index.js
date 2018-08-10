@@ -32,9 +32,15 @@ export default class Login extends Component {
 
         var e = this.state.email.toLowerCase();
         var p = this.state.password;
-        if (e == 'homework@gmail.com' && p == '123456') {
+        if (e == 'h' && p == '1') {
+            this.setState({
+                email: '',
+                password: '',
+                message: ''
+            });
             this.props.navigation.navigate('PlayerList');
         } else {
+            this.setState({ password: '' });
             this.setState({ message: 'Wrong username/password' });
         }
 
@@ -51,11 +57,13 @@ export default class Login extends Component {
                     <TextInput
                         onChangeText={this.emailChanged}
                         placeholder='Email'
+                        value={this.state.email}
                     />
                     <TextInput
                         onChangeText={this.passwordChanged}
                         placeholder='Password'
                         secureTextEntry={true}
+                        value={this.state.password}
                     />
                     <Text style={[styles.danger, mainStyles.p10]}>
                         {this.state.message}
